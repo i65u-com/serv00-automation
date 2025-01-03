@@ -36,7 +36,7 @@ for user, hostname in zip(user_list, hostname_list):
 beijing_timezone = timezone(timedelta(hours=8))
 time = datetime.now(beijing_timezone).strftime('%Y-%m-%d %H:%M:%S')
 menu = requests.get('https://#').json()
-loginip = requests.get('https://api.ipify.org?format=json').json()['ip']
+loginip = requests.get('https://api.ipify.cn?format=json').json()['ip']
 content += f"本次登录用户共： {user_num} 个\n登录时间：{time}\n登录IP：{loginip}"
 
 push = os.getenv('PUSH')
